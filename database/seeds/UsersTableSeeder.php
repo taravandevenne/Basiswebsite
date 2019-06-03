@@ -17,7 +17,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'taravandevenne@hotmail.com',
             'phone' => '0498846106',
             'role_id' => '1',
-            'password' => '123456'
+            'password' => bcrypt('123456')
         ]);
     }
 }

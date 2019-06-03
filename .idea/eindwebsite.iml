@@ -17,6 +17,13 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/erusev/parsedown" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/fideloper/proxy" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/fontawesome-free/css" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/fontawesome-free/js" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/fontawesome-free/less" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/fontawesome-free/scss" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/fontawesome-free/sprites" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/fontawesome-free/svgs" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/fontawesome-free/webfonts" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/fzaninotto/faker" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/hamcrest/hamcrest-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/jakub-onderka/php-console-color" />
