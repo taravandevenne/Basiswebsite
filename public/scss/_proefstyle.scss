@@ -1,0 +1,453 @@
+/*---------------ALGEMEEN---------------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: arial, verdana, tahoma;
+}
+
+.bluebg{
+  background:dodgerblue;
+}
+
+.bluecl{
+  color:dodgerblue;
+}
+
+.btn-shadow{
+  box-shadow: 3px 3px 3px dodgerblue;
+}
+/*-------------MAIN PAGINA-------------*/
+
+#LoginBackground{
+  background-image:url('../assets/images/loginfoto.jpg');
+  height:100vh;
+  top:0;
+  bottom:0;
+  position:relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.imgSize{
+  width:70px;
+}
+
+.bg-nav{
+    background:black;
+}
+
+
+/*-------------SECTIE 1 + CAROUSEL---------------*/
+
+
+.hovbtn:hover{
+  transform: scale(1.4);
+}
+
+
+/*--------------SECTIE 2 : MASONRY----------*/
+
+
+.btntext{
+  font-weight:bold;
+}
+
+
+/*------------PROMO--------------*/
+.foto{
+  height:300px;
+  width:100%;
+  z-index:10;
+}
+
+.promoText1{
+  font-size: 55px;
+  z-index:15;
+  color:white;
+  text-shadow: 2px 1px dodgerblue;
+}
+
+.promoText2{
+  color:white;
+  font-size: 25px;
+  z-index:15;
+  text-shadow: 2px 1px dodgerblue;
+  top: 50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+/*-------------------RAND-PAGES-ALGEMEEN----------------*/
+
+
+
+
+/*----------------ARTISTS-----------*/
+.avatar {
+  height:100px;
+}
+ .cardhead{
+     background: url("../assets/images/land.jpg");
+ }
+
+.bg-rand-page{
+  background-image: linear-gradient(black, lightgrey);
+  height:100%;
+}
+
+/*--------------GALLERY---------*/
+.ul-check-artist{
+  text-decoration:none;
+  list-style-type:none;
+}
+
+#style-tab, #artist-tab, #fame-tab{
+  color: white;
+  font-weight:bold;
+}
+
+#style-tab.active, #artist-tab.active, #fame-tab.active{
+  color: white;
+  background:dodgerblue;
+  font-weight:bold;
+}
+
+/* The container */
+.check {
+  display: block;
+  position: relative;
+  padding-left: 23px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 13px;
+  width: 13px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.check:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.check input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.check .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*-----------SHOP--------*/
+#input-select,
+#input-number {
+  padding: 7px;
+  margin: 15px 5px 5px;
+  width: 70px;
+}
+
+
+.box {
+  position:relative;
+
+  background:#000;
+
+
+  box-sizing:border-box;
+  overflow:hidden;
+  box-shadow:0 5px 10px rgba(0,0,0,.8);
+}
+.box:before {
+  content:'';
+  position:absolute;
+  top:10px;
+  left:10px;
+  right:10px;
+  bottom:10px;
+  border-top:1px solid #fff;
+  border-bottom:1px solid #fff;
+  box-sizing:border-box;
+  transition:0.5s;
+  transform: scaleX(0);
+  opacity:0;
+}
+.box:hover:before {
+  transform:scaleX(1);
+  opacity:1;
+}
+.box:after {
+  content:'';
+  position:absolute;
+  top:10px;
+  left:10px;
+  right:10px;
+  bottom:10px;
+  border-left:1px solid #fff;
+  border-right:1px solid #fff;
+  box-sizing:border-box;
+  transition:0.5s;
+  transform: scaleY(0);
+  opacity:0;
+}
+.box:hover:after {
+  transform:scaleY(1);
+  opacity:1;
+}
+
+.box .content {
+  position:absolute;
+  width:100%;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:2;
+  padding:20px;
+  box-sizing:border-box;
+  text-align:center;
+}
+
+.box:hover .content{
+  opacity:1;
+  visibility:visible;
+}
+
+.box .content{
+  opacity:1;
+  visibility:hidden;
+}
+
+/*-----------------CHECKOUT-----------*/
+#gegevens-tab, #afspraak-tab, #betalen-tab, #overzicht-tab{
+  color: Black;
+  font-weight:bold;
+}
+
+#gegevens-tab, #afspraak-tab, #betalen-tab, #overzicht-tab.active{
+  color: white;
+  font-weight:bold;
+}
+
+.pointer {
+  width: 200px;
+  height: 40px;
+  position: relative;
+  background: dodgerblue;
+}
+.pointer:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+.pointer:before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid dodgerblue;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+
+
+/*---------------FOOTER----------------*/
+
+footer { width:1140px; background-color:black; padding:10px 0px 25px 0px ;}
+.pt2 { padding-top:40px ; margin-bottom:20px ;}
+footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
+.bottom_border { border-bottom:1px solid #323f45; padding-bottom:20px;}
+
+.icons { display:table; margin:15px auto 0 auto; list-style-type:none;  }
+.icons li { padding-left:20px; padding-top:10px; float:left; }
+.icons li a { color:#CCC; border:1px solid #CCC; padding:8px;border-radius:50%;}
+.icons li i {  width:20px; height:20px; text-align:center;}
+
+.hovlogo1:hover {
+  color: #3b5998;
+}
+
+.hovlogo2:hover {
+  color: #00aced;
+}
+
+.hovlogo3:hover {
+  color: #0077B5;
+}
+
+.hovlogo4:hover {
+  color: #d6249f;
+}
+
+.footlist {
+  list-style-type: none;
+  text-decoration: none;
+  line-height: 2;
+  font-weight: 100;
+}
+
+.kaart {
+  width: 230px;
+  height: 200px;
+}
+
+.kaart2 {
+  width: 100%;
+  height: 200px;
+}
+
+.text-cont{
+  font-size: 16px;
+}
+
+.cont-title{
+  font-size: 24px;
+}
+
+
+/**MEDIAQUERIES ALLES WAT GROTER IS DAN MOBILE**/
+
+@include media-breakpoint-up(sm) {
+
+}
+
+@include media-breakpoint-up(md) {
+  .foto{
+    height:700px;
+    width:100%;
+  }
+
+  .promoText1{
+    font-size: 95px;
+    z-index:15;
+  }
+
+  .promoText2{
+
+    font-size: 50px;
+    z-index:15;
+
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+  }
+
+
+
+}
+
+@include media-breakpoint-up(lg) {
+  .d-fixed-top{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+
+  .kaart {
+    width: 350px;
+    height: 250px;
+  }
+
+  .kaart2 {
+    height: 350px;
+  }
+
+  .ulnav {
+    font-size:21px;
+  }
+
+  .foto{
+    height:900px;
+    width:100%;
+  }
+
+  .promoText1{
+    font-size: 95px;
+    z-index:15;
+  }
+
+  .promoText2{
+
+    font-size: 70px;
+    z-index:15;
+
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+  }
+
+  .text-cont{
+    font-size: 16px;
+  }
+
+  .op-nav{
+  opacity: 0.2;
+  }
+
+
+}
+
+@include media-breakpoint-up(xl) {
+
+}
+
+
+
+
+
+
+
+
+
+

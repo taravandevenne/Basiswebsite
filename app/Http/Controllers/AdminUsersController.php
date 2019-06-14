@@ -2,7 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Role;
+use App\User;
 use Illuminate\Http\Request;
+use App\Http\Requests\UsersRequest;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
+use App\Http\Requests\UsersUpdateRequest;
 
 class AdminUsersController extends Controller
 {
@@ -13,7 +19,8 @@ class AdminUsersController extends Controller
      */
     public function index()
     {
-        return view('admin.users.index');
+        $users = User::paginate(15);
+        return view('admin.users.index', compact('users'));
     }
 
     /**
@@ -23,7 +30,8 @@ class AdminUsersController extends Controller
      */
     public function create()
     {
-        return view('admin.users.create');
+        $roles = Role::pluck('role','id')->all();
+        return view('admin.users.create', compact('roles'));
     }
 
     /**
@@ -32,9 +40,18 @@ class AdminUsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UsersRequest $request)
     {
-        //
+        User::create([
+            'name' => $request['name'],
+            'role_id' => $request['role_id'],
+            'email' => $request['email'],
+            'phone' => $request['phone'],
+            'active' => $request['active'],
+            'password' => Hash::make($request['password']),
+
+        ]);
+        return redirect('/admin/users');
     }
 
     /**
@@ -56,7 +73,10 @@ class AdminUsersController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $user = User::findOrFail($id);
+        $roles = Role::pluck('role','id')->all();
+        return view('admin.users.edit', compact('user','roles'));
     }
 
     /**
@@ -66,9 +86,19 @@ class AdminUsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UsersUpdateRequest $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+        if(trim($request->password) == ''){
+            $input = $request->except('password');
+        }else{
+            $input = $request->all();
+            $input['password'] = Hash::make($request['password']);
+        }
+
+        $user -> update($input);
+        return redirect('admin/users');
+
     }
 
     /**
@@ -79,6 +109,8 @@ class AdminUsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::findOrFail($id)->delete();
+        Session::flash('deleted_user', 'The user is deleted.');
+        return redirect ('/admin/users');
     }
 }

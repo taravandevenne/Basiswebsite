@@ -1,0 +1,196 @@
+/*---------------ALGEMEEN---------------*/
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: arial, verdana, tahoma; }
+
+/*-------------MAIN PAGINA-------------*/
+#mijnBackground {
+  background-image: url("../assets/images/mainfoto.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: -5; }
+
+.d-fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030; }
+
+.ulnav {
+  font-size: 21px; }
+
+/*-------------SECTTIE 1 + CAROUSEL---------------*/
+.carousel {
+  padding: 0 70px; }
+
+.carousel .item {
+  min-height: 330px;
+  text-align: center;
+  overflow: hidden; }
+
+.carousel .item .img-box {
+  height: 300px;
+  width: 100%;
+  position: relative; }
+
+.carousel .item img {
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  left: 0;
+  right: 0; }
+
+.carousel .item h4 {
+  font-size: 18px;
+  margin: 10px 0; }
+
+.carousel .thumb-wrapper {
+  text-align: center;
+  background: #555555; }
+
+.carousel .thumb-content {
+  padding: 15px; }
+
+.carousel .carousel-control {
+  height: 100px;
+  width: 40px;
+  background: none;
+  margin: auto 0;
+  background: rgba(0, 0, 0, 0.2); }
+
+.carousel .carousel-control i {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  margin: -16px 0 0 0;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: none;
+  font-weight: bold; }
+
+.carousel .item-price {
+  font-size: 14px;
+  padding: 2px 0; }
+
+.carousel .item-price strike {
+  color: #999;
+  margin-right: 5px; }
+
+.carousel .item-price span {
+  color: #86bd57;
+  font-size: 110%; }
+
+.carousel .carousel-control.left i {
+  margin-left: -3px; }
+
+.carousel .carousel-control.left i {
+  margin-right: -3px; }
+
+.carousel .carousel-indicators {
+  bottom: -50px; }
+
+.carousel-indicators li, .carousel-indicators li.active {
+  width: 10px;
+  height: 10px;
+  margin: 4px;
+  border-radius: 50%;
+  border-color: transparent; }
+
+.carousel-indicators li {
+  background: rgba(0, 0, 0, 0.2); }
+
+.carousel-indicators li.active {
+  background: rgba(0, 0, 0, 0.6); }
+
+.star-rating li {
+  padding: 0; }
+
+.star-rating i {
+  font-size: 14px;
+  color: #ffc000; }
+
+.bgslider {
+  background: black; }
+
+.sec1 {
+  background: black; }
+
+.hovbtn:hover {
+  -webkit-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  transform: scale(1.4); }
+
+/*---------------FOOTER----------------*/
+footer {
+  width: 1140px;
+  background-color: black;
+  padding: 10px 0px 25px 0px; }
+
+.pt2 {
+  padding-top: 40px;
+  margin-bottom: 20px; }
+
+footer p {
+  font-size: 13px;
+  color: #CCC;
+  padding-bottom: 0px;
+  margin-bottom: 8px; }
+
+.bottom_border {
+  border-bottom: 1px solid #323f45;
+  padding-bottom: 20px; }
+
+.icons {
+  display: table;
+  margin: 15px auto 0 auto;
+  list-style-type: none; }
+
+.icons li {
+  padding-left: 20px;
+  padding-top: 10px;
+  float: left; }
+
+.icons li a {
+  color: #CCC;
+  border: 1px solid #CCC;
+  padding: 8px;
+  border-radius: 50%; }
+
+.icons li i {
+  width: 20px;
+  height: 20px;
+  text-align: center; }
+
+.hovlogo1:hover {
+  color: #3b5998; }
+
+.hovlogo2:hover {
+  color: #00aced; }
+
+.hovlogo3:hover {
+  color: #0077B5; }
+
+.hovlogo4:hover {
+  color: #d6249f; }
+
+.footlist {
+  list-style-type: none;
+  text-decoration: none;
+  line-height: 2;
+  font-weight: 100; }
+
+/**MEDIAQUERIES ALLES WAT GROTER IS DAN MOBILE**/

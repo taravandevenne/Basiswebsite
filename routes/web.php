@@ -13,12 +13,24 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
-Route::resource('admin/users', "AdminUsersController");
+Route::get('/', "FrontController@main")->name('main');
+Route::get('/artists', "FrontController@frontartists")->name('frontartists');
+Route::get('/gallery', "FrontController@frontgallery")->name('frontgallery');
+Route::get('/shop', "FrontController@shop")->name('shop');
+Route::get('/contact', "FrontController@contact")->name('contact');
+Route::get('/info', "FrontController@info")->name('info');
+Route::get('/cart', "FrontController@cart")->name('cart');
 
-Route::get('/admin', 'HomeController@index');
+
+Route::resource('admin/users', "AdminUsersController");
+Route::resource('admin/roles', "AdminRolesController");
+Route::resource('admin/artists', "AdminArtistsController");
+Route::resource('admin/tattoos', "AdminTattoosController");
+Route::resource('admin/advances', "AdminAdvancesController");
+
+Route::get('/admin', 'HomeController@index')->name('admin');
+
+
