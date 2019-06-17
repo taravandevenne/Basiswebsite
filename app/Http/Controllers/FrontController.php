@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Advance;
 use App\Artist;
+use App\Photo;
 use App\Tattoo;
 use Illuminate\Http\Request;
 
@@ -27,7 +29,9 @@ class FrontController extends Controller
     public function shop(){
         $tattoos = Tattoo::all();
         $artists = Artist::all();
-        return view('shop', compact('tattoos', 'artists'));
+        $advances = Advance::all();
+        $photos = Photo::all();
+        return view('shop', compact('tattoos', 'artists', 'advances','photos'));
     }
 
     public function contact(){
@@ -41,7 +45,4 @@ class FrontController extends Controller
         return view('info', compact('tattoos', 'artists'));
     }
 
-    public function cart(){
-        return view('cart');
-    }
 }

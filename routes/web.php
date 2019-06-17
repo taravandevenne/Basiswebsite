@@ -11,6 +11,7 @@
 |
 */
 
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Route;
 
 
@@ -22,7 +23,11 @@ Route::get('/gallery', "FrontController@frontgallery")->name('frontgallery');
 Route::get('/shop', "FrontController@shop")->name('shop');
 Route::get('/contact', "FrontController@contact")->name('contact');
 Route::get('/info', "FrontController@info")->name('info');
-Route::get('/cart', "FrontController@cart")->name('cart');
+
+
+Route::get('/cart', "CartController@cartpage")->name('cart');
+Route::post('/cart', "CartController@addcart")->name('addcart');
+Route::delete('/cart/{tattoo}', "CartController@remove")->name('remove');
 
 
 Route::resource('admin/users', "AdminUsersController");

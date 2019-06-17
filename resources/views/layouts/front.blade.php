@@ -47,7 +47,11 @@
                 <a class="nav-link text-white" href="{{route('contact')}}">Contact</a>
             </li>
             <li class="nav-item">
-                <a href="{{route('cart')}}"><button type="button" class="btn bg-transparent text-white mb-lg-0 mb-2"><i class="fas fa-shopping-cart"></i></button></a>
+                <a href="{{route('cart')}}"><button type="button" class="btn bg-transparent text-white mb-lg-0 mb-2"><i class="fas fa-shopping-cart"></i>
+                            @if (Cart::count() > 0)
+                            <span class="badge bg-white rounded-circle bluecl">{{Cart::count()}}</span>
+                        @endif
+                    </button></a>
             </li>
 
             @if (Route::has('login'))

@@ -26,7 +26,26 @@
 
                                 </div>
                                 <div class="d-flex flex-row justify-content-center">
-                                    <a href="shoppingcart.html"><button class="btn bluebg text-white btn-shadow mb-3"><i class="fas fa-shopping-cart"></i> Add to cart</button></a>
+                                    
+                                    {{--<a href="shoppingcart.html"><button class="btn bluebg text-white btn-shadow mb-3"><i class="fas fa-shopping-cart"></i> Add to cart</button></a>--}}
+
+                                    <form action="{{route('addcart')}}" method="POST">
+                                        {{csrf_field()}}
+                                        <input type="hidden" name="id" value="{{$tattoo->id}}">
+                                        <input type="hidden" name="name" value="{{$tattoo->name}}">
+                                        <input type="hidden" name="artist" value="{{$tattoo->artist->name}}">
+                                        {{--<input type="hidden" name="price" value="{{$tattoo->price}}">--}}
+                                        <input type="hidden" name="advance" value="{{$tattoo->advance->amount}}">
+                                        {{--<input type="hidden" name="photo" value="{{$tattoo->photo->file}}">--}}
+                                        <button type="submit" class="btn bluebg text-white btn-shadow mb-3">Add to cart</button>
+                                    </form>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
                                     <button class="hovbtn btn bg-transparent bluecl ml-2 mb-2 d-lg-none"><i class="fas fa-heart "></i></button>
                                 </div>
                             </div>
