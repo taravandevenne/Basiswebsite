@@ -22,7 +22,7 @@ class CartController extends Controller
         }
 
 
-        Cart::add($request->id, $request->name, 1, $request->advance, ['artist'=>$request->artist]);
+        Cart::add($request->id, $request->name, 1, $request->advance, 0, ['artist'=>$request['artist'], 'total'=>$request['total'], 'photo'=>$request['photo']]);
         return redirect()->route('cart')->with('success_message','Item was added to your cart!');
     }
 

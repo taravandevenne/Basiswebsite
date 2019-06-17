@@ -34,9 +34,9 @@
                                         <input type="hidden" name="id" value="{{$tattoo->id}}">
                                         <input type="hidden" name="name" value="{{$tattoo->name}}">
                                         <input type="hidden" name="artist" value="{{$tattoo->artist->name}}">
-                                        {{--<input type="hidden" name="price" value="{{$tattoo->price}}">--}}
+                                        <input type="hidden" name="total" value="{{$tattoo->price}}">
                                         <input type="hidden" name="advance" value="{{$tattoo->advance->amount}}">
-                                        {{--<input type="hidden" name="photo" value="{{$tattoo->photo->file}}">--}}
+                                        <input type="hidden" name="photo" value="{{$tattoo->photo->file}}">
                                         <button type="submit" class="btn bluebg text-white btn-shadow mb-3">Add to cart</button>
                                     </form>
                                     

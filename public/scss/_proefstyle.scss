@@ -8,15 +8,15 @@ body {
 }
 
 .bluebg{
-  background:dodgerblue;
+  background:#17a2b8;
 }
 
 .bluecl{
-  color:dodgerblue;
+  color:#17a2b8;
 }
 
 .btn-shadow{
-  box-shadow: 3px 3px 3px dodgerblue;
+  box-shadow: 3px 3px 3px #17a2b8;
 }
 /*-------------MAIN PAGINA-------------*/
 
@@ -66,14 +66,14 @@ body {
   font-size: 55px;
   z-index:15;
   color:white;
-  text-shadow: 2px 1px dodgerblue;
+  text-shadow: 2px 1px #17a2b8;
 }
 
 .promoText2{
   color:white;
   font-size: 25px;
   z-index:15;
-  text-shadow: 2px 1px dodgerblue;
+  text-shadow: 2px 1px #17a2b8;
   top: 50%;
   left:50%;
   transform:translate(-50%,-50%);
@@ -110,7 +110,7 @@ body {
 
 #style-tab.active, #artist-tab.active, #fame-tab.active{
   color: white;
-  background:dodgerblue;
+  background:#17a2b8;
   font-weight:bold;
 }
 
@@ -154,7 +154,7 @@ body {
 
 /* When the checkbox is checked, add a blue background */
 .check input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #17a2b8;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -274,7 +274,7 @@ body {
   width: 200px;
   height: 40px;
   position: relative;
-  background: dodgerblue;
+  background: #17a2b8;
 }
 .pointer:after {
   content: "";
@@ -294,7 +294,7 @@ body {
   bottom: 0;
   width: 0;
   height: 0;
-  border-left: 20px solid dodgerblue;
+  border-left: 20px solid #17a2b8;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
 }
