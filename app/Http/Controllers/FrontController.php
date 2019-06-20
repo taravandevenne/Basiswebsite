@@ -45,4 +45,11 @@ class FrontController extends Controller
         return view('info', compact('tattoos', 'artists'));
     }
 
+    public function product($id){
+        $tattoos = Tattoo::findOrFail($id);
+        $artists = Artist::all();
+        $advances = Advance::all();
+        return view('product', compact('tattoos', 'artists','advances'));
+    }
+
 }

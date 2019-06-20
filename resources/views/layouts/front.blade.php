@@ -24,7 +24,7 @@
 
 <nav class="navbar bg-nav navbar-expand-lg navbar-light  py-lg-0">
     <a class="navbar-brand ml-lg-5 mr-0 text-white" href="#">InkXperience</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -96,15 +96,9 @@
 </nav>
 
 
-<div class="container-fluid">
-    <!-- Content Row -->
-    <div class="row">
-        <div class="col-lg-12 p-0">
-            @yield('content')
-        </div>
-    </div>
 
-</div>
+            @yield('content')
+
 
 
 

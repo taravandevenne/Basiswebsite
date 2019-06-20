@@ -21,7 +21,7 @@ body {
 /*-------------MAIN PAGINA-------------*/
 
 #LoginBackground{
-  background-image:url('../assets/images/loginfoto.jpg');
+ // background-image:url('../assets/images/loginfoto.jpg');
   height:100vh;
   top:0;
   bottom:0;
@@ -88,12 +88,10 @@ body {
 .avatar {
   height:100px;
 }
- .cardhead{
-     background: url("../assets/images/land.jpg");
- }
 
 .bg-rand-page{
-  background-image: linear-gradient(black, lightgrey);
+  //background-image: linear-gradient(black, lightgrey);
+    background-color: #FFF0F2;
   height:100%;
 }
 
@@ -154,7 +152,7 @@ body {
 
 /* When the checkbox is checked, add a blue background */
 .check input:checked ~ .checkmark {
-  background-color: #17a2b8;
+  background-color: white;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -175,7 +173,7 @@ body {
   top: 1px;
   width: 5px;
   height: 10px;
-  border: solid white;
+  border: solid black;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -408,7 +406,7 @@ footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
   }
 
   .foto{
-    height:900px;
+    height:750px;
     width:100%;
   }
 

@@ -3,7 +3,7 @@
 
     <section class="container-fluid bg-rand-page">
         <div class="container">
-            <h2 class="text-center py-4 text-white">Info/Afspraak</h2>
+            <h2 class="text-center py-4 text-dark">Info/Afspraak</h2>
             <div class="row">
                 <div class="col-lg-6 col-12 d-flex align-items-stretch">
                     <div class="card mb-4 mb-lg-0">
@@ -46,9 +46,9 @@
             <hr class="bluebg mr-3 mr-lg-0">
             <div class="row">
                 <div class="col-lg-8 col-12 order-0">
-                    <h2 class="text-center py-4 text-white">Bijkomende informatie</h2>
-                    <h3 class="text-white"><i class="fas fa-angle-double-right  pr-2"></i>House Rules</h3>
-                    <ul style="list-style-type:disc" class="text-white">
+                    <h2 class="text-center py-4 text-dark">Bijkomende informatie</h2>
+                    <h3 class="text-dark"><i class="fas fa-angle-double-right  pr-2"></i>House Rules</h3>
+                    <ul style="list-style-type:disc" class="text-dark">
                         <li>Tattoos worden gezet vanaf 18 jaar, piercings vanaf 16 jaar mits het bijzijn of toestemming van een ouder. </li>
                         <li>Bij alle tattoos wordt er op voorhand een voorschot betaald bij het afspreken van een datum:
                             <ul style="list-style-type:circle" class="ml-4">
@@ -78,7 +78,7 @@
                     <img class="img-fluid" src="assets/images/infoFoto1.jpg" alt="">
                 </div>
                 <div class="col-lg-6 col-12 order-2 order-lg-3">
-                    <div class="text-white text-right">
+                    <div class="text-dark text-right">
                         <h3><i class="fas fa-angle-double-right  pr-2"></i>Werkwijze tattoos</h3>
                         <p>Daar wij uit liefde voor ons vak kwaliteit voor kwantiteit verkiezen werken wij enkel op afspraak, zowel voor een bespreking als voor het plaatsen van een tatoeage.</p>
                         <p>Tijdens een bespreking kunnen wij op deze manier iedere klant op de gepaste wijze te woord staan en een duidelijk beeld schetsen van hun wensen, om vervolgens ongestoord en met volle aandacht dit tot een mooi resultaat te brengen.</p>
@@ -88,7 +88,7 @@
                 </div>
 
                 <div class="col-lg-6 col-12 order-4">
-                    <div class="text-white">
+                    <div class="text-dark">
                         <h3><i class="fas fa-angle-double-right  pr-2"></i>Na-verzorging tattoos</h3>
                         <p>Wil je graag een tatoeage waar je trots op kunt zijn, dan is de nazorg heel belangrijk. De genezingstijd van je nieuwe tatoeage bedraagt ongeveer 2 weken.
                             Algemene gezondheid en lichamelijke hygiëne spelen hierbij een belangrijke rol. Tijdens het genezingsproces kan de nieuwe tatoeage gaan jeuken en/of vervellen, dit is normaal.</p>
@@ -116,7 +116,7 @@
                 <div class="col-lg-6 col-12 order-lg-6 order-7 mt-lg-3 d-flex justify-content-md-center">
                     <img class="img-fluid" src="assets/images/infoFoto3.jpg" alt="">
                 </div>
-                <div class="col-lg-6 col-12 order-lg-7 order-6 text-white mt-lg-3">
+                <div class="col-lg-6 col-12 order-lg-7 order-6 text-dark mt-lg-3">
                     <h3><i class="fas fa-angle-double-right  pr-2"></i>Werkwijze piercings</h3>
                     <p>Onze vriendelijke en bekwame medewerker zal u helpen een keuze te maken bij alle sieraden die beschikbaar zijn voor de specifieke piercing waarin u geïnteresseerd bent.
                         De kwaliteit van uw juweel wordt gegarandeerd daar wij enkel titanium of chirurgisch staal gebruiken om uw lichaam te versieren.
@@ -129,7 +129,7 @@
             <hr class="bluebg mr-3 mr-lg-0">
             <div class="row">
                 <div class="col-12 w-100">
-                    <h5 class=" pt2 cont-title text-center text-white"><i class="fas fa-angle-double-right  pr-2"></i>Op de kaart</h5>
+                    <h5 class=" pt2 cont-title text-center text-dark"><i class="fas fa-angle-double-right  pr-2"></i>Op de kaart</h5>
                     <div class=" d-flex">
                         <iframe class="kaart2 flex-fill mb-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2511.643065774348!2d2.956116915957999!3d50.9857878565268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dcb5ee25f39319%3A0x138cdeaf6f88c93e!2sUnnamed+Road%2C+8650+Houthulst!5e0!3m2!1snl!2sbe!4v1544007530983" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
@@ -300,8 +300,8 @@
                                 </div>
                                 <div class="row mt-5 ">
                                     <div class="col-12 d-flex justify-content-end">
-                                        <button type="reset" class="btn bluebg text-white mr-2">Reset</button>
-                                        <button type="submit" class="btn bluebg text-white" data-dismiss="modal">Versturen</button>
+                                        <button type="reset" class="btn bluebg text-dark mr-2">Reset</button>
+                                        <button type="submit" class="btn bluebg text-dark" data-dismiss="modal">Versturen</button>
                                     </div>
                                 </div>
 
@@ -365,8 +365,8 @@
 
                                 <div class="row mt-5 ">
                                     <div class="col-12 d-flex justify-content-end">
-                                        <button type="reset" class="btn bluebg text-white mr-2">Reset</button>
-                                        <button type="submit" class="btn bluebg text-white" data-dismiss="modal">Versturen</button>
+                                        <button type="reset" class="btn bluebg text-dark mr-2">Reset</button>
+                                        <button type="submit" class="btn bluebg text-dark" data-dismiss="modal">Versturen</button>
                                     </div>
                                 </div>
 

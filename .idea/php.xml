@@ -98,6 +98,7 @@
       <path value="$PROJECT_DIR$/vendor/fontawesome-free/sprites" />
       <path value="$PROJECT_DIR$/vendor/fontawesome-free/webfonts" />
       <path value="$PROJECT_DIR$/vendor/bumbummen99/shoppingcart" />
+      <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

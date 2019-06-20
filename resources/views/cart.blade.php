@@ -1,9 +1,9 @@
 @extends('layouts.front')
 @section('content')
 
-    <section class="mb-md-5">
+    <section class="pb-md-5">
         <div class="container">
-            <h2 class="text-info text-center pt-4"><i class="fas fa-angle-double-right text-info pr-2"></i>Your shoppingcart</h2>
+            <h2 class="text-dark text-center pt-4"><i class="fas fa-angle-double-right text-dark pr-2"></i>Your shoppingcart</h2>
             <div class="row mt-4">
                 <div class="col-12">
                     @if(session()->has('success_message'))
@@ -35,7 +35,7 @@
 
 
                     @foreach(Cart::content() as $item)
-                        <table class="table table-bordered table-active table-responsive-md my-3">
+                        <table class="table table-bordered bg-rand-page table-responsive-md my-3">
                             <thead>
                             <tr>
                                 <th scope="col">Tattoo</th>
@@ -78,7 +78,58 @@
                             <p class="font-weight-bold">Amount still to pay in store : <span class="font-weight-normal"> ... </span></p>
                         </div>
 
-                        <button class="btn btn-sm btn-info ml-md-5">Go to checkout</button>
+
+
+
+
+
+
+                        <form id="checkout-form" action="aankopen" method="POST">
+                            {{csrf_field()}}
+                            <input type="hidden" name="stripeToken" id="stripeToken">
+                            <input type="hidden" name="stripeEmail" id="stripeEmail">
+                            <button type="submit" class="btn btn-sm btn-info ml-md-5">Go to checkout</button>
+
+                            <script src="https://checkout.stripe.com/checkout.js"></script>
+                            <script>
+                                    {{--src="https://checkout.stripe.com/checkout.js" class="stripe-button"--}}
+                                    {{--data-key="{{config('services.stripe.key')}}"--}}
+                                    {{--data-amount="1000"--}}
+                                    {{--data-name="Mijn winkelmandje"--}}
+                                    {{--data-description="Beschrijving winkelmandje"--}}
+                                    {{--data-image="https://stripe.com/img/documentation/checkout/marketplace.png"--}}
+                                    {{--data-locale="auto"--}}
+                                    {{--data-currency="eur">--}}
+
+                                let stripe = StripeCheckout.configure({
+                                        key:"{{config('services.stripe.key')}}",
+                                        image:"https://stripe.com/img/documentation/checkout/marketplace.png",
+                                        locale:"auto",
+                                        token: function(token){
+                                            document.querySelector('#stripeEmail').value=token.email;
+                                            document.querySelector('#stripeToken').value=token.id;
+                                            document.querySelector('#checkout-form').submit();
+
+                                        }
+                                    });
+
+                                document.querySelector('button').addEventListener('click', function(e){
+                                    stripe.open({
+                                        name:'mijn product',
+                                        description:'details over product',
+                                        zipCode:false,
+                                        amount: 1000,
+                                        currency:'eur',
+                                    });
+                                    e.preventDefault();
+                                });
+                            </script>
+                        </form>
+
+
+
+
+
                     </div>
                 </div>
 
