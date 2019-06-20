@@ -52,4 +52,7 @@ class FrontController extends Controller
         return view('product', compact('tattoos', 'artists','advances'));
     }
 
+    public function checkbetaling(){
+        return view('checkbetaling');
+    }
 }

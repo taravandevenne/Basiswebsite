@@ -126,10 +126,18 @@
                 </div>
 
             @else
-                <div>
-                    <h3>No items in the cart!</h3>
+                <div class="row">
+                    <div class="col-8">
+                        <h3>No items in the cart!</h3>
 
-                    <a href="{{route('shop')}}"><button class="btn btn-info mt-3"><i class="fas fa-angle-double-left"></i> Go back shopping </button></a>
+                        <a href="{{route('shop')}}"><button class="btn btn-info my-5"><i class="fas fa-angle-double-left"></i> Go back shopping </button></a>
+
+                        <p>Vragen? Contacteer ons gerust via ons formulier op de website of een telefoontje!</p>
+                        <a href="{{route('contact')}}"><button class="btn btn-sm btn-info "><i class="fas fa-angle-double-left"></i> Contacteer ons</button></a>
+                    </div>
+                    <div class="col-4">
+                        <img src="assets/images/quote1.png" height="400" alt="">
+                    </div>
                 </div>
 
             @endif

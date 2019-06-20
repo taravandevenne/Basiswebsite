@@ -16,7 +16,7 @@
                                     <img src="{{$artist->avatar ? asset($artist->avatar->file) : 'http://placehold.it/400x400'}}" class="img-fluid mx-auto d-block mt-5 rounded-circle avatar" alt="">
                                 </div>
                             </div>
-                            <div class="card-body text-center d-flex flex-column">
+                            <div class="card-body px-1 text-center d-flex flex-column">
                                 <div class="mb-auto">
                                     <h5 class="card-title text-info "><u>{{$artist->name}}</u></h5>
                                     <h6 class="card-text font-weight-bold">Stijl:</h6>
@@ -26,8 +26,9 @@
                                     <h6 class="card-text font-weight-bold">Info:</h6>
                                     <p class="card-text">{{$artist->info}}</p>
                                 </div>
-                                <div>
-                                    <a href="#" class="btn bg-info text-white  mx-auto d-block align-self-end ">See designs</a>
+                                <div class="d-lg-flex ">
+                                    <a href="{{route('frontgallery', [ "artist" => $artist->id ])}}" class="btn bg-info text-white mt-3 mx-1 d-block align-self-end ">Designs gallery</a>
+                                    <a href="{{route('frontgallery', [ "artist" => $artist->id ])}}" class="btn bg-info text-white mt-3 mx-1 d-block align-self-end ">Designs shop</a>
                                 </div>
                             </div>
                         </div>

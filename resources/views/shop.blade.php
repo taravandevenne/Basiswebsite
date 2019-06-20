@@ -4,9 +4,20 @@
     <div class="container-fluid">
         <div class="container">
             <h2 class="text-dark text-center pt-4"><i class="fas fa-angle-double-right text-dark pr-2"></i>Shop</h2>
+            <div class="row">
+                @if($artists)
+                    @foreach($artists as $artist)
+                <div class="col-1 mt-5 mx-2 text-white">
+                    <a href="{{route('shop', [ "artist" => $artist->id ])}}"><button class="btn rounded bluebg text-white">{{$artist->name}}</button></a>
+
+                </div>
+                    @endforeach
+                @endif
+            </div>
                     <div class="row text-center py-5">
                         @if($tattoos)
                             @foreach($tattoos as $tattoo)
+                                @if (!request('artist') || (request('artist') && request('artist') == $tattoo->artist->id))
                         <div class="col-lg-3 d-flex align-items-stretch mb-3">
                             <div class="card bg-rand-page">
                                 <div class="card-header d-flex">
@@ -39,17 +50,12 @@
                                         <input type="hidden" name="photo" value="{{$tattoo->photo->file}}">
                                         <button type="submit" class="btn bluebg text-white btn-shadow mb-3">Add to cart</button>
                                     </form>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
+
                                     <button class="hovbtn btn bg-transparent bluecl ml-2 mb-2 d-lg-none"><i class="fas fa-heart "></i></button>
                                 </div>
                             </div>
                         </div>
+                                @endif
                             @endforeach
                         @endif
 

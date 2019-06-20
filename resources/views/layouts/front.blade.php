@@ -102,7 +102,7 @@
 
 
 
-<footer class="footer mx-auto d-block container-fluid">
+<footer class="footer  container-fluid ">
     <div class="container bottom_border">
         <div class="row ml-lg-3 ml-2">
             <div class="col-12 col-lg-3 col-md-6 pl-0 pl-md-2">

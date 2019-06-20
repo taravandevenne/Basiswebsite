@@ -24,6 +24,7 @@ Route::get('/shop', "FrontController@shop")->name('shop');
 Route::get('/contact', "FrontController@contact")->name('contact');
 Route::get('/info', "FrontController@info")->name('info');
 Route::get('/product/{id}', "FrontController@product")->name('product');
+Route::get('/checkbetaling', "FrontController@checkbetaling")->name('checkbetaling');
 
 
 Route::get('/cart', "CartController@cartpage")->name('cart');

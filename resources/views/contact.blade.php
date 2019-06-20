@@ -301,7 +301,8 @@
                                 <div class="row mt-5 ">
                                     <div class="col-12 d-flex justify-content-end">
                                         <button type="reset" class="btn bluebg text-dark mr-2">Reset</button>
-                                        <button type="submit" class="btn bluebg text-dark" data-dismiss="modal">Versturen</button>
+                                        <a  href="mailto:taravandevenne@hotmail.com?Subject=Hello%20again" target="_top"> <button type="submit" class="btn bluebg text-dark" data-dismiss="modal">Versturen</button></a>
+
                                     </div>
                                 </div>
 

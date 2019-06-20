@@ -26,6 +26,6 @@ class AankopenController extends Controller
             'currency' => 'eur',
         ]);
       //  dd(request()->all());
-        return 'Oke overdracht gelukt';
+        return redirect('checkbetaling');
     }
 }
