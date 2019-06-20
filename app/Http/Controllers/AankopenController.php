@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Gloudemans\Shoppingcart\Cart;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Stripe\Charge;
 use Stripe\Customer;
@@ -22,10 +22,10 @@ class AankopenController extends Controller
 
         Charge::create([
             'customer' => $customer->id,
-            'amount' => 1000,
+            'amount' => Cart::subtotal()*100,
             'currency' => 'eur',
         ]);
-        //dd(request()->all());
+      //  dd(request()->all());
         return 'Oke overdracht gelukt';
     }
 }

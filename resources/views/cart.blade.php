@@ -88,18 +88,10 @@
                             {{csrf_field()}}
                             <input type="hidden" name="stripeToken" id="stripeToken">
                             <input type="hidden" name="stripeEmail" id="stripeEmail">
-                            <button type="submit" class="btn btn-sm btn-info ml-md-5">Go to checkout</button>
+                            <button type="submit" id="checkoutbtn" class="btn btn-sm btn-info ml-md-5">Go to checkout</button>
 
                             <script src="https://checkout.stripe.com/checkout.js"></script>
                             <script>
-                                    {{--src="https://checkout.stripe.com/checkout.js" class="stripe-button"--}}
-                                    {{--data-key="{{config('services.stripe.key')}}"--}}
-                                    {{--data-amount="1000"--}}
-                                    {{--data-name="Mijn winkelmandje"--}}
-                                    {{--data-description="Beschrijving winkelmandje"--}}
-                                    {{--data-image="https://stripe.com/img/documentation/checkout/marketplace.png"--}}
-                                    {{--data-locale="auto"--}}
-                                    {{--data-currency="eur">--}}
 
                                 let stripe = StripeCheckout.configure({
                                         key:"{{config('services.stripe.key')}}",
@@ -113,12 +105,12 @@
                                         }
                                     });
 
-                                document.querySelector('button').addEventListener('click', function(e){
+                                document.querySelector('#checkoutbtn').addEventListener('click', function(e){
                                     stripe.open({
                                         name:'mijn product',
                                         description:'details over product',
                                         zipCode:false,
-                                        amount: 1000,
+                                        amount: '{{Cart::subtotal()}}'*100,
                                         currency:'eur',
                                     });
                                     e.preventDefault();
