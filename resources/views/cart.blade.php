@@ -48,7 +48,8 @@
 
                             <tbody>
                             <tr>
-                                <td> <img src="{{$item->options->photo ? asset($item->options->photo) : 'http://placehold.it/400x400'}}" class="" height="100" alt=""></td>
+
+                                <td> <img src="{{asset('assets'.$item->options->photo) }}" class="" height="100" alt=""></td>
                                 <td>{{$item->name}}</td>
                                 <td>{{$item->options->total}}</td>
                                 <td>{{$item->price}}</td>
