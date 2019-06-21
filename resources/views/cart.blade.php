@@ -73,9 +73,9 @@
                     </div>
                     <div class="col-md-6 col-12">
                         <div class="ml-md-5 d-flex justify-content-end flex-column">
-                            <p class="font-weight-bold">Total of the tattoo : <span class="font-weight-normal"> ... </span></p>
+
                             <p class="font-weight-bold text-info">Total advance to pay : <span class="font-weight-normal">€ {{Cart::subtotal()}}</span></p>
-                            <p class="font-weight-bold">Amount still to pay in store : <span class="font-weight-normal"> ... </span></p>
+
                         </div>
 
 
@@ -95,7 +95,7 @@
 
                                 let stripe = StripeCheckout.configure({
                                         key:"{{config('services.stripe.key')}}",
-                                        image:"https://stripe.com/img/documentation/checkout/marketplace.png",
+                                        image:"{{asset('/assets/images/Logo.jpg')}}",
                                         locale:"auto",
                                         token: function(token){
                                             document.querySelector('#stripeEmail').value=token.email;
@@ -107,8 +107,8 @@
 
                                 document.querySelector('#checkoutbtn').addEventListener('click', function(e){
                                     stripe.open({
-                                        name:'mijn product',
-                                        description:'details over product',
+                                        name:'My payment',
+                                        description:'Welkom bij de betaling.',
                                         zipCode:false,
                                         amount: '{{Cart::subtotal()}}'*100,
                                         currency:'eur',
