@@ -14,9 +14,9 @@ class CreateArtistsTable extends Migration
     public function up()
     {
         Schema::create('artists', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('name');
-            $table->string('avatar_id')->default('No file');
+            $table->integer('avatar_id')->index()->unsigned()->nullable();
             $table->string('style');
             $table->string('started');
             $table->string('info')->nullable();

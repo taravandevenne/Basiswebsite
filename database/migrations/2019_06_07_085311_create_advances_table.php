@@ -14,7 +14,7 @@ class CreateAdvancesTable extends Migration
     public function up()
     {
         Schema::create('advances', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('name');
             $table->string('range');
             $table->decimal('amount',8,2);

@@ -14,4 +14,8 @@ class Avatar extends Model
     public function getFileAttribute($avatar){
         return $this->uploads . $avatar;
     }
+
+    public function artists(){
+        return $this->belongsTo('App\Artist');
+    }
 }

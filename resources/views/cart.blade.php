@@ -3,7 +3,7 @@
 
     <section class="pb-md-5">
         <div class="container">
-            <h2 class="text-dark text-center pt-4"><i class="fas fa-angle-double-right text-dark pr-2"></i>Your shoppingcart</h2>
+            <h2 class="text-dark text-md-center text-left pt-4"><i class="fas fa-angle-double-right text-dark pr-2"></i>Your shoppingcart</h2>
             <div class="row mt-4">
                 <div class="col-12">
                     @if(session()->has('success_message'))
@@ -24,7 +24,6 @@
 
                             <h3>{{Cart::count()}} item(s) in your shopping cart</h3>
 
-                            <button class="btn btn-sm btn-outline-info"><i class="fas fa-trash-alt"></i> Empty cart</button>
                     </div>
                 </div>
             </div>
@@ -68,10 +67,10 @@
                     @endforeach
             
                 <div class="row mt-5">
-                    <div class="col-6 ">
+                    <div class="col-md-6 col-12">
                     <p>Opgelet! <br> Bij het niet opdagen op de afspraak, wordt het voorschot niet terug betaald. De rest van het bedrag moet op de afspraak cash of met bancontact betaald worden.</p>
                     </div>
-                    <div class="col-6">
+                    <div class="col-md-6 col-12">
                         <div class="ml-md-5 d-flex justify-content-end flex-column">
                             <p class="font-weight-bold">Total of the tattoo : <span class="font-weight-normal"> ... </span></p>
                             <p class="font-weight-bold text-info">Total advance to pay : <span class="font-weight-normal">€ {{Cart::subtotal()}}</span></p>
@@ -88,7 +87,7 @@
                             {{csrf_field()}}
                             <input type="hidden" name="stripeToken" id="stripeToken">
                             <input type="hidden" name="stripeEmail" id="stripeEmail">
-                            <button type="submit" id="checkoutbtn" class="btn btn-sm btn-info ml-md-5">Go to checkout</button>
+                            <button type="submit" id="checkoutbtn" class="btn btn-sm btn-info ml-md-5 mb-3">Go to checkout</button>
 
                             <script src="https://checkout.stripe.com/checkout.js"></script>
                             <script>
@@ -126,16 +125,16 @@
                 </div>
 
             @else
-                <div class="row">
-                    <div class="col-8">
+                <div class="row my-3">
+                    <div class="col-lg-8 col-md-12 col-12">
                         <h3>No items in the cart!</h3>
 
-                        <a href="{{route('shop')}}"><button class="btn btn-info my-5"><i class="fas fa-angle-double-left"></i> Go back shopping </button></a>
+                        <a href="{{route('shop')}}"><button class="btn btn-info my-md-5 my-3"><i class="fas fa-angle-double-left"></i> Go back shopping </button></a>
 
                         <p>Vragen? Contacteer ons gerust via ons formulier op de website of een telefoontje!</p>
                         <a href="{{route('contact')}}"><button class="btn btn-sm btn-info "><i class="fas fa-angle-double-left"></i> Contacteer ons</button></a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-lg-4 d-none d-lg-block ">
                         <img src="assets/images/quote1.png" height="400" alt="">
                     </div>
                 </div>

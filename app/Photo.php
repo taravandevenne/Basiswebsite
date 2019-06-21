@@ -14,4 +14,8 @@ class Photo extends Model
     public function getFileAttribute($photo){
         return $this->uploads . $photo;
     }
+
+    public function tattoo(){
+        return $this->belongsTo('App\Tattoo');
+    }
 }

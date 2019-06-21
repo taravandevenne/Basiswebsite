@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Advance;
 use App\Artist;
+use App\Avatar;
 use App\Photo;
 use App\Tattoo;
 use Illuminate\Http\Request;
@@ -12,12 +13,14 @@ class FrontController extends Controller
 {
     public function main(){
         $tattoos = Tattoo::all();
-        return view('main', compact('tattoos'));
+        $photos = Photo::all();
+        return view('main', compact('tattoos','photos'));
     }
 
     public function frontartists(){
         $artists = Artist::all();
-        return view('artists', compact('artists'));
+        $avatars = Avatar::all();
+        return view('artists', compact('artists', 'avatars'));
     }
 
     public function frontgallery(){

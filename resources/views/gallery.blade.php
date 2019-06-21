@@ -17,12 +17,12 @@
 
                                 @if($artists)
                                     @foreach($artists as $artist)
-                                        <div class="col-1 my-1 mx-2 text-white">
+                                        <div class="col-lg-1 col-md-2  my-1 mx-2 text-white">
                                     <a href="{{route('frontgallery', [ "artist" => $artist->id ])}}"><button class="btn rounded bluebg text-white my-1">{{$artist->name}}</button></a>
                                         </div>
                                     @endforeach
                                 @endif
-                                <div class="col-1 my-1 mx-2 text-white">
+                                <div class="col-lg-1 col-md-2  my-1 mx-2 text-white">
                                     <a href="{{route('frontgallery')}}"><button class="btn rounded bg-white text-info border-info my-1">Show all</button></a>
                                 </div>
                         </div>
@@ -35,7 +35,7 @@
                                 <div class="col-lg-3 col-md-3">
                                     <div class="card w-100 my-3">
                                         <div class="card-body p-0">
-                                            <img src="{{$tattoo->photo ? asset($tattoo->photo->file) : 'http://placehold.it/400x400'}}" class="img-fluid" alt="">
+                                            <img src="{{asset('assets'.$tattoo->photo->file) }}" class="img-fluid" alt="">
                                         </div>
                                         <div class="card-footer p-1 d-flex justify-content-center my-auto">
                                             {{--<button class="hovbtn btn bg-transparent bluecl "><i class="fas fa-thumbs-up "></i></button>--}}

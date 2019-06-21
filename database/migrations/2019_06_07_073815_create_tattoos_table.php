@@ -14,12 +14,12 @@ class CreateTattoosTable extends Migration
     public function up()
     {
         Schema::create('tattoos', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('name');
             $table->integer('artist_id')->index()->unsigned()->nullable();
             $table->decimal('price',8,2)->nullable();
             $table->integer('advance_id')->index()->unsigned()->nullable();
-            $table->string('photo_id')->default('No file');
+            $table->integer('photo_id')->index()->unsigned()->nullable();
             $table->timestamps();
         });
     }

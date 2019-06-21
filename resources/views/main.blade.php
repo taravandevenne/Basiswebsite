@@ -9,11 +9,11 @@
     <!----------------------------------------SLIDER OP GROOT SCHERM------------------------------------------>
     <section class="container-fluid">
         <div class="row mb-3">
-            <div class="col-5 pl-0">
+            <div class="col-lg-5 col-md-6 col-12 px-0">
                 <img src="assets/images/test1.jpeg" height="950" class="w-100" alt="">
             </div>
-            <div class="col-7 d-flex text-center align-items-center justify-content-center flex-column bluecl">
-                <h1 class="mb-5">Welcome to InkXperience,</h1>
+            <div class="col-lg-7 col-md-6 col-12 my-3 d-flex text-center align-items-center justify-content-center flex-column bluecl">
+                <h1 class="mb-md-5">Welcome to InkXperience,</h1>
                 <h2>Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit. A architecto, <br> atque earum illo iste maiores
                     necessitatibus neque officiis, <br> placeat porro quia similique. Atque commodi dolor error <br> nemo officia omnis quas?</h2>
             </div>
@@ -35,9 +35,10 @@
 
             @if($tattoos)
                 @foreach($tattoos as $tattoo)
+
             <div class="col-lg-2 my-3">
                 <div>
-                    <a href="#" > <img src="{{$tattoo->photo ? asset($tattoo->photo->file) : 'http://placehold.it/400x400'}}" class="border img-fluid d-flex" alt=""></a>
+                    <a href="#" > <img src="{{asset('assets'.$tattoo->photo->file) }}" class="border img-fluid d-flex" alt=""></a>
                 </div>
             </div>
                 @endforeach

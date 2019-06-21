@@ -6,9 +6,9 @@
     <h2 class="bluecl text-center pt-5 py-md-4"><i class="fas fa-angle-double-right bluecl pr-2"></i>Product beschrijving</h2>
     <div class="row my-5">
         <div class="col-md-6 col-12 d-flex">
-            <img class="mx-auto" height="400" src="{{$tattoos->photo ? asset($tattoos->photo->file) : 'http://placehold.it/400x400'}}" alt="">
+            <img class="mx-auto" height="400" src="{{asset('assets'.$tattoos->photo->file) }}" alt="">
         </div>
-        <div class="col-md-6 col-12">
+        <div class="col-md-6 col-12 mt-3 mt-md-0">
             <h3>{{$tattoos->name}}</h3>
             <h4 class="mb-4">{{$tattoos->artist->name}}</h4>
             <p>Prijs: € {{$tattoos->price}}</p>

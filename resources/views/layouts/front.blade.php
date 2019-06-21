@@ -127,22 +127,22 @@
             <div class="col-lg-3 col-md-4 text-lg-right d-none d-lg-block">
                 <h5 class="text-white pt2"><i class="fas fa-angle-double-right text-white pr-2"></i>Links</h5>
                 <ul class="footlist">
-                    <li ><a class="text-white" href="index.html">Home</a></li>
-                    <li><a class="text-white" href="artists.html">Artists</a></li>
-                    <li><a class="text-white" href="gallery.html">Gallery</a></li>
-                    <li><a class="text-white" href="shop.html">Shop</a></li>
-                    <li><a class="text-white" href="contact.html">Contact</a></li>
+                    <li ><a class="text-white" href="{{route('main')}}">Home</a></li>
+                    <li><a class="text-white" href="{{route('frontartists')}}">Artists</a></li>
+                    <li><a class="text-white" href="{{route('frontgallery')}}">Gallery</a></li>
+                    <li><a class="text-white" href="{{route('shop')}}">Shop</a></li>
+                    <li><a class="text-white" href="{{route('contact')}}">Contact</a></li>
                 </ul>
             </div>
             <!----------------------FOOTER-LINKS OP KLEIN SCHERM-------------------->
             <div class="col-12 text-center d-flex justify-content-center flex-column d-lg-none">
                 <h5 class="text-white pt2"><i class="fas fa-angle-double-right text-white pr-2"></i>Links</h5>
                 <ul class="footlist d-inline-block list-inline">
-                    <li class="list-inline-item"><a class="text-white" href="index.html">Home</a></li>
-                    <li class="list-inline-item"><a class="text-white" href="artists.html">Artists</a></li>
-                    <li class="list-inline-item"><a class="text-white" href="gallery.html">Gallery</a></li>
-                    <li class="list-inline-item"><a class="text-white" href="shop.html">Shop</a></li>
-                    <li class="list-inline-item"><a class="text-white" href="contact.html">Contact</a></li>
+                    <li ><a class="text-white" href="{{route('main')}}">Home</a></li>
+                    <li><a class="text-white" href="{{route('frontartists')}}">Artists</a></li>
+                    <li><a class="text-white" href="{{route('frontgallery')}}">Gallery</a></li>
+                    <li><a class="text-white" href="{{route('shop')}}">Shop</a></li>
+                    <li><a class="text-white" href="{{route('contact')}}">Contact</a></li>
                 </ul>
             </div>
 

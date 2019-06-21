@@ -13,7 +13,8 @@
                         <div class="card w-100  bg-rand-page">
                             <div style="background-image:url({{asset('/assets/images/land.jpg')}});">
                                 <div class="">
-                                    <img src="{{$artist->avatar ? asset($artist->avatar->file) : 'http://placehold.it/400x400'}}" class="img-fluid mx-auto d-block mt-5 rounded-circle avatar" alt="">
+
+                                    <img src="{{asset($artist->avatar->file) }}" class="img-fluid mx-auto d-block mt-5 rounded-circle avatar" alt="">
                                 </div>
                             </div>
                             <div class="card-body px-1 text-center d-flex flex-column">
@@ -28,7 +29,7 @@
                                 </div>
                                 <div class="d-lg-flex ">
                                     <a href="{{route('frontgallery', [ "artist" => $artist->id ])}}" class="btn bg-info text-white mt-3 mx-1 d-block align-self-end ">Designs gallery</a>
-                                    <a href="{{route('frontgallery', [ "artist" => $artist->id ])}}" class="btn bg-info text-white mt-3 mx-1 d-block align-self-end ">Designs shop</a>
+                                    <a href="{{route('shop', [ "artist" => $artist->id ])}}" class="btn bg-info text-white mt-3 mx-1 d-block align-self-end ">Designs shop</a>
                                 </div>
                             </div>
                         </div>

@@ -16,5 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ArtistsTableSeeder::class);
         $this->call(TattoosTableSeeder::class);
         $this->call(AdvancesTableSeeder::class);
+        $this->call(AvatarsTableSeeder::class);
+        $this->call(PhotosTableSeeder::class);
     }
 }

@@ -7,15 +7,18 @@
             <div class="row">
                 @if($artists)
                     @foreach($artists as $artist)
-                <div class="col-1 mt-5 mx-2 text-white">
+                <div class="col-lg-1 col-md-2 mt-md-5 mt-2 mx-2 text-white">
                     <a href="{{route('shop', [ "artist" => $artist->id ])}}"><button class="btn rounded bluebg text-white">{{$artist->name}}</button></a>
 
                 </div>
                     @endforeach
                 @endif
+                    <div class="col-lg-1 col-md-2 mt-md-5 mt-2 mx-2 text-white">
+                    <a href="{{route('shop')}}"><button class="btn rounded bg-white text-info border-info my-1">Show all</button></a>
+                    </div>
             </div>
                     <div class="row text-center py-5">
-                        @if($tattoos)
+                        @if(!request('artist') || count($tattoos->where('artist_id', request('artist'))) != 0)
                             @foreach($tattoos as $tattoo)
                                 @if (!request('artist') || (request('artist') && request('artist') == $tattoo->artist->id))
                         <div class="col-lg-3 d-flex align-items-stretch mb-3">
@@ -23,7 +26,7 @@
                                 <div class="card-header d-flex">
                                     <div class="box">
                                         <div class="imgbox">
-                                            <img src="{{$tattoo->photo ? asset($tattoo->photo->file) : 'http://placehold.it/400x400'}}" class="img-fluid align-self-center" alt="">
+                                            <img src="{{asset('assets'.$tattoo->photo->file) }}" class="img-fluid align-self-center" alt="">
                                         </div>
                                         <div class="content">
                                             <a href="{{route('product', $tattoo->id)}}"><button class="hovbtn btn bg-transparent text-white mb-2"><i class="fas fa-info-circle fa-2x"></i></button></a>
@@ -57,6 +60,10 @@
                         </div>
                                 @endif
                             @endforeach
+                        @else <div class="col-12 bg-rand-page">
+                            <h3 class="my-5 text-center mx-auto">Er zijn momenteel geen tattoos voor deze artist. <br>
+                                Kom later nog eens terug! <br>  <i class="fas fa-2x fa-times-circle my-3"></i></h3>
+                            </div>
                         @endif
 
 
